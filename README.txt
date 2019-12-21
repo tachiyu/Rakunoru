@@ -1,29 +1,26 @@
 RAKUNORU
-�C���^�[���V�b�v�Ő��삵���f���p��WEB/�A���h���C�h�A�v���ł��B
-�e�[�}�͉w�̃z�[���ŎԈ֎q�̕����f���F���Ŏ����Ŕ��ʂ��A�ԓ��\���ŏ�q�ɒʒm���悤�ł��B
-���̃f���Ƃ��ĊȈՔł����܂����B
-�V�X�e���\����
+インターンシップで制作したデモ用のWEB/アンドロイドアプリです。
+テーマは駅のホームで車椅子の方を映像認識で自動で判別し、車内表示で乗客に通知しようです。
+そのデモとして簡易版を作りました。
+システム構造は
 
-���A���h���C�h�A�v���Ŏʐ^�B�e
-���摜��Google Cloud Vision API�ɓ��e
-���摜��͂���Ďʐ^���ɉf���Ă�����̂̃��x�����Ԃ��Ă���̂ŁA�Ԉ֎q���f���Ă��鎞����
-WEB�y�[�W�̉摜�ihttp://fanbedbag.php.xdomain.jp/display.php�j�������ւ����܂��B
+→アンドロイドアプリで写真撮影
+→画像をGoogle Cloud Vision APIに投稿
+→画像解析されて写真内に映っているもののラベルが返ってくるので、車椅子が映っている時だけ
+WEBページの画像（http://fanbedbag.php.xdomain.jp/display.php）が差し替えられます。
 
-������android studio,PHP,HTML�ōs���AGoogle Cloud Vision API �̃T���v���R�[�h��
-���ς��Ďg�p�����Ă��������܂����B
+実装はandroid studio,PHP,HTMLで行い、Google Cloud Vision API のサンプルコードを
+改変して使用させていただきました。
 
+使用にあたって、Rakunoru/Rakunoru(Android)/RakunoruAndroid/app/build.gradleの20行目と
+Rakunoru/Rakunoru(Android)/RakunoruAndroid/app/src/main/java/com/google/sample/rakunorandroid/MainActivity.javaの66行目の
+YOUR_API_KEYをご自分のAPI key（Google Cloud Vision APIの登録が必要）に書き換える必要があります。
+API keyをお持ちの方はぜひ試してみてください！
 
-
-
-
-
-
-
-
-
-
+謝辞：一緒に案を出してくださり、表示用WEBページの画像を作ってくださったグループメンバー
+の皆様に感謝申し上げます。
 
 
 This software includes the work that is distributed in the Apache License 2.0.
 
-���̃\�t�g�E�F�A�́A Apache 2.0���C�Z���X�Ŕz�z����Ă��鐻�앨���܂܂�Ă��܂��B
+このソフトウェアは、 Apache 2.0ライセンスで配布されている製作物が含まれています。
